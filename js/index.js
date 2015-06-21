@@ -664,10 +664,13 @@ appScore.app = {
 		this.bindEvents();
 
 		$(document).on('touchend', 'a', function(e) { 
-			console.log('clicked');
-			console.log($(this).attr('data-href')); 
-			document.location.href = $(this).attr('data-href');
-			//return false;
+			var href = $(this).attr('data-href');
+			if (typeof href != 'undefined') {
+				console.log('clicked');
+				console.log($(this).attr('data-href')); 
+				document.location.href = $(this).attr('data-href');
+				//return false;
+			}
 		});
 
 		console.log('initialized');

@@ -60,7 +60,7 @@
 		<div id='session' data-role='page'>
 			<div id="players" class="players" data-role="page">
 				<div data-role='header' role='banner' class='ui-header ui-bar-inherit'>
-					<a data-href='#games' data-transition='slide' data-direction='reverse' class='btn-back ui-btn-left ui-btn ui-icon-back ui-btn-icon-notext' data-role='button' role='button' style='padding:10px'></a>
+					<a href='#games' data-transition='slide' data-direction='reverse' class='btn-back ui-btn-left ui-btn ui-icon-back ui-btn-icon-notext' data-role='button' role='button' style='padding:10px'></a>
 					<a data-href='' class='btn-add-game ui-btn-right ui-btn ui-icon-plus ui-btn-icon-notext' data-role='button' role='button' style='padding:10px;display:none'></a>
 					<h4 class='title' style='margin-left:60px;margin-right:0px;font-size:20px; text-align:left'></h4>
 				</div>
@@ -75,7 +75,7 @@
 		<div id="sessions" data-role="page">
 			<div id="sessions" class="sessions" data-role="page">
 				<div data-role='header' role='banner' class='ui-header ui-bar-inherit'>
-					<a data-href='#games' data-transition='slide' data-direction='reverse' class='btn-back ui-btn-left ui-btn ui-icon-home ui-btn-icon-notext' data-role='button' style='padding:10px' role='button' style='display:block'></a>
+					<a href='#games' data-transition='slide' data-direction='reverse' class='btn-back ui-btn-left ui-btn ui-icon-home ui-btn-icon-notext' data-role='button' style='padding:10px' role='button' style='display:block'></a>
 					<a data-href='#sessionseditor?' id='session-editor' class='btn-edit-game ui-btn-right ui-btn ui-icon-edit ui-btn-icon-notext' data-role='button' role='button' style='padding:10px;display:none'></a>
 					<h4 class='title' style='margin-left:60px;margin-right:0px;font-size:22px; text-align:center'></h4>
 				</div>
@@ -168,6 +168,11 @@
 
 		
 		<script type='text/javascript' src='bower_components/jquery/jquery.min.js'></script>
+		<script>
+			$(document).bind("mobileinit", function(){
+				$.mobile.defaultPageTransition = 'slide';
+			});
+		</script>
 		<script type='text/javascript' src="js/jquery.mobile.router.min.js"></script>
 		<script type='text/javascript' src="bower_components/jquery-mobile/js/jquery.mobile-1.4.5.min.js"></script>
 		<script type='text/javascript' src='bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
